@@ -1,0 +1,12 @@
+services:
+  frontend:
+    container_name: arrowlink-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: arrowlink-frontend
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "2060:3000"
